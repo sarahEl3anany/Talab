@@ -64,3 +64,78 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
+
+---------------------------------------------Sarah:---------------------------
+laravel new Talab
+
+composer require laravel/ui
+
+php artisan vendor:publish --tag=laravel-assets --ansi --force
+
+php artisan ui vue
+
+npm install
+
+npm i vue-router@next
+
+npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/vue-fontawesome@latest
+
+npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
+npx tailwindcss init -p
+
+
+-----------------
+// tailwind.config.js
+  module.exports = {
+   purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+      extend: {},
+    },
+    variants: {
+      extend: {},
+    },
+    plugins: [],
+  }
+  
+  
+  -----------------------------------
+  /* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+-------------------
+
+// src/main.js
+import './bootstrap';
+import '../css/app.css'
+import { createApp } from 'vue';
+import App from './App.vue';
+const app = createApp(App);
+
+app.mount('#app');
+
+-------------------
+//routes/web.php
+<?php
+
+use Illuminate\Support\Facades\Route;
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/{pathMatch}', function (){
+    return view('app');
+})->where('pathMatch',".*");
+
