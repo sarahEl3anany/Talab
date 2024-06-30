@@ -22,18 +22,23 @@
         Login
       </button>
       </div>
+      <!-- <div>
+        <button @click="login">Login Using Google</button>
+      </div> -->
     </form>
   </div>
 </template>
-  
-  <script>
-  export default {
-    name: 'LoginPage',
-    methods:{
-      loginSubmit(){
-        
-      }
-    }
-  }
-  </script>
-  
+<script setup>
+// import { googleSdkLoaded } from "vue3-google-login"
+// const login = () => {
+//   googleSdkLoaded((google) => {
+//     google.accounts.oauth2.initCodeClient({
+//       client_id: '1051999924248-tid1j97euin1sg709mn6iq1dh98fu6ti.apps.googleusercontent.com',
+//       scope: "talabvue@talabvue.iam.gserviceaccount.com",
+//       callback: (response) => {
+//         console.log("Handle the response", response)
+//       }
+//     }).requestCode()
+//   })
+// }
+</script>

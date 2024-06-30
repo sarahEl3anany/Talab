@@ -4,10 +4,12 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "start": "concurrently 'php artisan config:cache' 'php artisan serve' 'npm run dev '  "
+        "start": "vite build && concurrently 'php artisan config:cache' 'php artisan serve' 'npm run dev '  "
     },
     "devDependencies": {
         "@popperjs/core": "^2.11.6",
+        "@types/gapi.auth2": "^0.0.60",
+        "@types/googlemaps": "^3.43.3",
         "@vitejs/plugin-vue": "^4.5.0",
         "autoprefixer": "^10.4.19",
         "axios": "^1.6.4",
@@ -25,6 +27,7 @@
         "@fortawesome/free-regular-svg-icons": "^6.5.2",
         "@fortawesome/free-solid-svg-icons": "^6.5.2",
         "@fortawesome/vue-fontawesome": "^3.0.8",
-        "vue-router": "^4.0.13"
+        "vue-router": "^4.0.13",
+        "vue3-google-login": "^2.0.26"
     }
 }
